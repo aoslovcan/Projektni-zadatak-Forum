@@ -28,41 +28,44 @@
 }
 
 #title {
-    text-transform: capitalize;
-    text-align: left;
-   height: 6.5rem;
-   padding:5px;
-    border-bottom: 1px dotted black;
+  text-transform: capitalize;
+  text-align: left;
+ height: 6.5rem;
+ padding:5px;
+  border-bottom: 1px solid black;
+  border-radius: 5px;
 }
 
 
+
 .pagination {
-    display: flex;
-    justify-content: space-between;
-    list-style: none;
-    cursor: pointer;
-    margin: auto;
-  }
-  
-  .pagination a {
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #333333;
-    color: #333333;
-  }
-  
-  .pagination_link {
-    font-weight: bold;
-  }
-  
-  .pagination_link--active a {
-    color: #fff;
-    background: #bfbfbf;
-  }
-  
-  .pagination_link--disabled a {
-    color: rgb(198, 197, 202);
-    border: 1px solid rgb(198, 197, 202);
-  }
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  cursor: pointer;
+  margin: auto;
+  margin-top: 20px;
+}
+
+.pagination a {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #333333;
+  color: #333333;
+}
+
+.pagination_link {
+  font-weight: bold;
+}
+
+.pagination_link--active a {
+  color: #fff;
+  background: #bfbfbf;
+}
+
+.pagination_link--disabled a {
+  color: rgb(198, 197, 202);
+  border: 1px solid rgb(198, 197, 202);
+}
   
 

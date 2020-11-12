@@ -55,3 +55,17 @@ server.get("/posts", (req, res) => {
     );
   });
 
+  server.get("/users", (req, res) => {
+    request(
+      {
+        url:
+          "https://jsonplaceholder.typicode.com/users",
+      },
+      (error, response, body) => {
+        if (error || response.statusCode !== 200) {
+          return res.status(500).json({ type: "error", message: err.message });
+        }
+        res.end(JSON.stringify(body));
+      }
+    );
+  });

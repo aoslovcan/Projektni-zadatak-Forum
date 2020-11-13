@@ -30,13 +30,18 @@
 #title {
   text-transform: capitalize;
   text-align: left;
- height: 6.5rem;
+ height: 100px;
  padding:5px;
+ border: 1px solid white;
   border-bottom: 1px solid black;
   border-radius: 5px;
+  cursor: pointer;
 }
 
-
+#title:hover{
+  background-color: aliceblue;
+  border: 1px solid black;
+}
 
 .pagination {
   display: flex;

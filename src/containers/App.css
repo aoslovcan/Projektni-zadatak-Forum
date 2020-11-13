@@ -1,3 +1,10 @@
 .App {
   text-align: center;
+ 
+}
+
+#nav{
+  background-color:aliceblue;
+  padding: 5px;
+  color:black;
 }

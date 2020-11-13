@@ -4,10 +4,8 @@ import Spinner from "react-bootstrap/Spinner";
 import "./Posts.css";
 import Post from "./Posts/Post";
 import ReactPaginate from "react-paginate";
-import NavigateBeforeIcon from '@material-ui/icons/NavigateBefore';
-import NavigateNextIcon from '@material-ui/icons/NavigateNext';
-
-
+import NavigateBeforeIcon from "@material-ui/icons/NavigateBefore";
+import NavigateNextIcon from "@material-ui/icons/NavigateNext";
 
 class Posts extends Component {
   constructor(props) {
@@ -63,16 +61,15 @@ class Posts extends Component {
     console.log(posts);
     if (isLoaded) {
       return (
-        <div className="container">
+        <div className="container posts">
           <div className="row col-sm-4">
             <h1 id="all-posts">Posts</h1>
           </div>
           <div className="row">
             {posts.map((post) => (
-              <Post post={post} />
+              <Post post={post} key={post.id} />
             ))}
-          </div>
-          <div className="row">
+
             <ReactPaginate
               previousLabel={"Previous"}
               nextLabel={"Next"}
@@ -82,21 +79,18 @@ class Posts extends Component {
               previousLinkClassName={"pagination_link"}
               nextLinkClassName={"pagination_link"}
               disabledClassName={"pagination_link--disabled"}
-              activeClassName={"pagination_link--active"}  
+              activeClassName={"pagination_link--active"}
             />
           </div>
-        
         </div>
       );
     } else {
       return (
         <div className="spinner">
-          <p>
-            Loading
-            <Spinner animation="grow" size="sm" />
-            <Spinner animation="grow" />
-            <Spinner animation="grow" />
-          </p>
+          Loading
+          <Spinner animation="grow" size="sm" />
+          <Spinner animation="grow" />
+          <Spinner animation="grow" />
         </div>
       );
     }

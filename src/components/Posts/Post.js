@@ -38,7 +38,7 @@ function Post(props) {
   };
 
   return (
-    <div className="col-sm-3">
+    <div className="post col-sm-3">
       <p onClick={() => getData(props.post.id)} id="title">
         <strong>{props.post.title}</strong>
       </p>
@@ -51,29 +51,39 @@ function Post(props) {
         aria-describedby="simple-modal-description"
       >
         <div className="skillModal" style={style}>
-          <CloseIcon id="close-button" onClick={closeModal} />
-          <h5>Post:</h5>
-          <div className="modal-body">
-            <h3>{props.post.title}</h3>
-            <p>{props.post.body}</p>
+          <div className="container">
+            <div className="row">
+              <CloseIcon id="close-button" onClick={closeModal} />
+            </div>
+            <div className="row ">
+              <div className="modal-body ">
+                <h3>{props.post.title}</h3>
+                <p>{props.post.body}</p>
+              </div>
+            </div>
+            <div className="row ">
+              <div className="modal-body" id="comments">
+                <h5>Comments:</h5>
+                {data.map((m) => (
+                  <ul className="list-group">
+                    <li className="list-group-item">
+                      <p>
+                        <FormatQuoteIcon />
+                      </p>
+                      <p>{m.body}</p>
+                      <p style={{ float: "right" }}>
+                        <FormatQuoteIcon />
+                      </p>
+
+                      <p style={{ clear: "both" }}>
+                        by: {m.email.split("@")[0]}
+                      </p>
+                    </li>
+                  </ul>
+                ))}
+              </div>
+            </div>
           </div>
-
-          <h5>Comments:</h5>
-          {data.map((m) => (
-            <ul className="list-group">
-              <li className="list-group-item">
-                <p>
-                  <FormatQuoteIcon />
-                </p>
-                <p>{m.body}</p>
-                <p style={{ float: "right" }}>
-                  <FormatQuoteIcon />
-                </p>
-
-                <p style={{ clear: "both" }}>by: {m.email.split("@")[0]}</p>
-              </li>
-            </ul>
-          ))}
         </div>
       </Modal>
     </div>

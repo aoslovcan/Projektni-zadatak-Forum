@@ -69,7 +69,6 @@ class Posts extends Component {
             {posts.map((post) => (
               <Post post={post} key={post.id} />
             ))}
-
             <ReactPaginate
               previousLabel={"Previous"}
               nextLabel={"Next"}

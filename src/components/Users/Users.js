@@ -46,41 +46,43 @@ function Users() {
 
   if (load) {
     return (
-      <div className="users"  style={{overflow: 'show'}}>
-        <div className="container">
-          <div className="row col-sm-3">
-            <h1 id="all-posts">Users</h1>
+      <div className="container">
+        <div className="users">
+          <div className="row col-sm-12">
+            <h1 id="all-posts">Users/</h1>
           </div>
           <div className="row">
-            <table className="table col-sm-12">
-              <thead>
-                <tr>
-                  <th scope="col">#</th>
-                  <th scope="col">Profile</th>
-                  <th scope="col">Name</th>
-                  <th scope="col">Email</th>
-                  <th scope="col">Adress</th>
-                  <th scope="col">Website</th>
-                  <th scope="col">Company name</th>
-                </tr>
-              </thead>
-              <tbody>
-                {users.map((user, index) => (
-                  <tr id="user" key={user.id}>
-                    <th scope="row">{user.id}.</th>
-                    <td>
-                      {" "}
-                      <Avatar alt={user.name} src={images[index]} />
-                    </td>
-                    <td>{user.name}</td>
-                    <td>{user.email}</td>
-                    <td>{user.address.street}</td>
-                    <td>{user.website}</td>
-                    <td>{user.company.name}</td>
+            <div className="col-sm-12" style={{ overflowX: "auto" }}>
+              <table className="table">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Profile</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Adress</th>
+                    <th scope="col">Website</th>
+                    <th scope="col">Company name</th>
                   </tr>
-                ))}
-              </tbody>
-            </table>
+                </thead>
+                <tbody>
+                  {users.map((user, index) => (
+                    <tr className="col-sm-12" id="user" key={user.id}>
+                      <th scope="row">{user.id}.</th>
+                      <td>
+                        {" "}
+                        <Avatar alt={user.name} src={images[index]} />
+                      </td>
+                      <td>{user.name}</td>
+                      <td>{user.email}</td>
+                      <td>{user.address.street}</td>
+                      <td>{user.website}</td>
+                      <td>{user.company.name}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
       </div>

@@ -38,10 +38,16 @@ function Post(props) {
   };
 
   return (
-    <div className="post col-sm-3">
-      <p onClick={() => getData(props.post.id)} id="title">
-        <strong>{props.post.title}</strong>
-      </p>
+    <>
+      <div className="col-sm-3 post">
+        <p
+          key={props.post.id}
+          onClick={() => getData(props.post.id)}
+          id="title"
+        >
+          <strong>{props.post.title}</strong>
+        </p>
+      </div>
 
       <Modal
         style={{ overflow: "auto" }}
@@ -86,7 +92,7 @@ function Post(props) {
           </div>
         </div>
       </Modal>
-    </div>
+    </>
   );
 }
 export default Post;

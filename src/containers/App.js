@@ -8,7 +8,7 @@ function App() {
     <div className="App">
       <h1 id="nav">Forum App</h1>
       <Posts />
-      <Users/>
+      <Users />
     </div>
   );
 }

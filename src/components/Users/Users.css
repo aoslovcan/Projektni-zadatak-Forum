@@ -1,23 +1,29 @@
-.users{
-    margin-top: 50px;
-    text-align: left;
-    width: 100%;
-    min-width: 600px;
-    overflow: hidden;
-    
+.users {
+  margin-top: 50px;
+  text-align: left;
+  width: 100%;
+  min-width: 600px;
 }
-.title{
-    text-align: left;
+.title {
+  text-align: left;
 }
 
-#user:hover{
-    background-color: aliceblue;
-    cursor: pointer;
+#user:hover {
+  background-color: aliceblue;
+  color: #333333;
+  cursor: pointer;
 }
 
-@media only screen and (max-width: 320px) {
-    .users {
-      overflow: auto;
-     white-space: nowrap;
-    }
-  }
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid #ddd;
+  background-color: #333333;
+  color: #fff;
+}
+
+tbody,
+thead {
+  color: #ddd;
+}
